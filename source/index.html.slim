@@ -1,4 +1,6 @@
-.welcome
-  h1 Middleman is Watching
-  p.doc
-    = link_to "Read Online Documentation", "http://middlemanapp.com/"
+h1 Todo list
+div ng-controller="mainCtrl"
+  ul.list-group
+    li.list-group-item ng-repeat="task in tasks"
+      input type="checkbox" ng-model="task.done"
+      span class="done-{{task.done}}" {{task.body}}

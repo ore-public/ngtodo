@@ -6,7 +6,12 @@ html
     title= current_page.data.title || "The Middleman"
     
     = stylesheet_link_tag "normalize", "all"
+    = stylesheet_link_tag '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'
+    = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js'
+    = javascript_include_tag "http://code.jquery.com/jquery-1.11.0.min.js"
+    = javascript_include_tag "http://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    = javascript_include_tag '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'
     = javascript_include_tag  "all"
 
-  body
+  body ng-app="todoApp"
     = yield
